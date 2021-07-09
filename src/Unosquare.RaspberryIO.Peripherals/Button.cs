@@ -41,8 +41,8 @@ namespace Unosquare.RaspberryIO.Peripherals
         {
             var val = _gpioPin.Read();
 
-            if ((val && _gpioPin.InputPullMode == GpioPinResistorPullMode.PullDown) ||
-                (!val && _gpioPin.InputPullMode == GpioPinResistorPullMode.PullUp))
+            if ((val && _gpioPin.InputPullMode != GpioPinResistorPullMode.PullUp) ||
+                (!val && _gpioPin.InputPullMode != GpioPinResistorPullMode.PullDown))
                 HandleButtonPressed();
             else
                 HandleButtonReleased();
