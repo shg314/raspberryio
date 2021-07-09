@@ -1,4 +1,4 @@
-﻿namespace Unosquare.RaspberryIO.Camera
+namespace Unosquare.RaspberryIO.Camera
 {
     using System;
 
@@ -147,7 +147,12 @@
         /// <summary>
         /// The horizon
         /// </summary>
-        Horizon
+        Horizon,
+
+        /// <summary>
+        /// The horizon
+        /// </summary>
+        Greyworld,
     }
 
     /// <summary>
